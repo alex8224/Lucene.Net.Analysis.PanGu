@@ -26,11 +26,13 @@ namespace PanGu.Framework
     {
         static public string GetAssemblyPath()
         {
-            const string _PREFIX = @"file:///";
-            string codeBase = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
-
-            codeBase = codeBase.Substring(_PREFIX.Length, codeBase.Length - _PREFIX.Length).Replace("/", "\\");
-            return System.IO.Path.GetDirectoryName(codeBase) + @"\";
+//            const string _PREFIX = @"file:///";
+//            string codeBase = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
+//
+//            codeBase = codeBase.Substring(_PREFIX.Length, codeBase.Length - _PREFIX.Length).Replace("/", "\\");
+//			codeBase = codeBase + @"\";
+//            return System.IO.Path.GetDirectoryName(codeBase) + @"\";
+			return System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly ().CodeBase).Substring(5);
         }
 
         static public string ProcessDirectory

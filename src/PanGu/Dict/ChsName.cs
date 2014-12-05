@@ -178,11 +178,11 @@ namespace PanGu.Dict
 
         public void LoadChsName(string dictPath)
         {
-            dictPath = Framework.Path.AppendDivision(dictPath, '\\');
+			//dictPath = Framework.Path.AppendDivision(dictPath, '\\');
 
-            LoadNameDict(dictPath + ChsSingleNameFileName, ref _SingleNameDict);
-            LoadNameDict(dictPath + ChsDoubleName1FileName, ref _DoubleName1Dict);
-            LoadNameDict(dictPath + ChsDoubleName2FileName, ref _DoubleName2Dict);
+			LoadNameDict(System.IO.Path.Combine(dictPath,ChsSingleNameFileName), ref _SingleNameDict);
+			LoadNameDict(System.IO.Path.Combine(dictPath,ChsDoubleName1FileName), ref _DoubleName1Dict);
+			LoadNameDict(System.IO.Path.Combine(dictPath, ChsDoubleName2FileName), ref _DoubleName2Dict);
         }
 
         public List<string> Match(string text, int start)

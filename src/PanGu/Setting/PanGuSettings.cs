@@ -78,8 +78,8 @@ namespace PanGu.Setting
             System.IO.Directory.SetCurrentDirectory(Framework.Path.GetAssemblyPath());
             path = System.IO.Path.GetFullPath(path);
             System.IO.Directory.SetCurrentDirectory(currentDir);
-
-            return Path.AppendDivision(path, '\\');
+			return path;
+			//return Path.AppendDivision(path, '\\');
 
         }
 

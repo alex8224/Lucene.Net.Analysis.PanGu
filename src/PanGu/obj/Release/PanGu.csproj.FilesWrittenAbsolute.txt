@@ -1,0 +1,13 @@
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.Resources.ChsDoubleName1.txt
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.Resources.ChsDoubleName2.txt
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.Resources.ChsSingleName.txt
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.Resources.Stopword.txt
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.Resources.Synonym.txt
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.Resources.Wildcard.txt
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.Resources.Dict.dct
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.AnalyzerResource.resources
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/bin/Release/PanGu.dll.mdb
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/bin/Release/PanGu.dll
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.dll
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/obj/Release/PanGu.dll.mdb
+/home/alex/project/oschina/Lucene.Net.Analysis.PanGu/src/PanGu/bin/Release/opencc.dll

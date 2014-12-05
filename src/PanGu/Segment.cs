@@ -18,6 +18,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using OpenCC;
 
 using PanGu.Framework;
 
@@ -352,7 +353,8 @@ namespace PanGu
 
                         if (_Options.TraditionalChineseEnabled)
                         {
-                            string simplified = Microsoft.VisualBasic.Strings.StrConv(cur.Value.Word, Microsoft.VisualBasic.VbStrConv.SimplifiedChinese, 0);
+						// string simplified = Microsoft.VisualBasic.Strings.StrConv(cur.Value.Word, Microsoft.VisualBasic.VbStrConv.SimplifiedChinese, 0);
+						string simplified = Converter.Trad2Simple (cur.Value.Word);
 
                             if (simplified != cur.Value.Word)
                             {
@@ -385,14 +387,14 @@ namespace PanGu
 
                                     if (originalWordType == WordType.SimplifiedChinese)
                                     {
-                                        newWord = Microsoft.VisualBasic.Strings.StrConv(wi.Word, 
-                                            Microsoft.VisualBasic.VbStrConv.TraditionalChinese, 0);
+									    newWord = Converter.Simple2Trad (wi.Word);
+									    //newWord = Microsoft.VisualBasic.Strings.StrConv(wi.Word, Microsoft.VisualBasic.VbStrConv.TraditionalChinese, 0);
                                         wt = WordType.TraditionalChinese;
                                     }
                                     else
                                     {
-                                        newWord = Microsoft.VisualBasic.Strings.StrConv(wi.Word, 
-                                            Microsoft.VisualBasic.VbStrConv.SimplifiedChinese, 0);
+									    newWord = Converter.Trad2Simple (wi.Word);
+								   	    //newWord = Microsoft.VisualBasic.Strings.StrConv(wi.Word,Microsoft.VisualBasic.VbStrConv.SimplifiedChinese, 0);
                                         wt = WordType.SimplifiedChinese;
                                     }
 
@@ -732,7 +734,8 @@ namespace PanGu
         {
             _WordDictionary = new PanGu.Dict.WordDictionary();
             string dir = Setting.PanGuSettings.Config.GetDictionaryPath();
-            _WordDictionary.Load(dir + "Dict.dct");
+			_WordDictionary.Load(System.IO.Path.Combine(dir,"Dict.dct"));
+
 
             _ChsName = new PanGu.Dict.ChsName();
             _ChsName.LoadChsName(Setting.PanGuSettings.Config.GetDictionaryPath());
@@ -741,7 +744,7 @@ namespace PanGu
             _WordDictionary.ChineseName = _ChsName;
 
             _StopWord = new PanGu.Dict.StopWord();
-            _StopWord.LoadStopwordsDict(dir + "Stopword.txt");
+			_StopWord.LoadStopwordsDict(System.IO.Path.Combine(dir,"Stopword.txt"));
 
             _Synonym = new PanGu.Dict.Synonym();
 

@@ -1,7 +1,13 @@
 Lucene.Net.Analysis.PanGu
 =========================
+fork 自 https://github.com/JimLiu/Lucene.Net.Analysis.PanGu 
 
-盘古分词(http://pangusegment.codeplex.com/ )，由于老版本不支持最新Lucene.Net 3.0.3，对其进行了升级，可以支持最新的Lucene.Net 3.0.3。可以直接NuGet安装。另外把词库打包到dll文件里面了，无需拷贝词库。
+主要是修改了该程序一些代码使其能够在Mono for Linux下正确运行, 做了如下修改:
+
+1. 替换 Strings.StrConv 为 OpenCC，使用OpenCC进行简繁转换
+
+2. 修正引用一些路径时找不到文件的问题，使其更加通用
+
 
 使用说明
 =========================

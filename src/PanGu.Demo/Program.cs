@@ -16,6 +16,7 @@
  */
 
 using System;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -29,7 +30,12 @@ namespace Demo
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+//			string assemblyfullpath = System.IO.Path.Combine (
+//				System.IO.Path.GetDirectoryName (Assembly.GetExecutingAssembly ().CodeBase).Substring (5), 
+//				System.IO.Path.DirectorySeparatorChar);
+//			Console.WriteLine(assemblyfullpath);
+
+	            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormDemo());
         }
